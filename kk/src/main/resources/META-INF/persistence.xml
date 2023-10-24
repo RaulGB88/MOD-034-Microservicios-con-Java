@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+    <persistence-unit name="default">
+
+        <class>model.ActorEntity</class>
+        <class>model.AddressEntity</class>
+        <class>model.CategoryEntity</class>
+        <class>model.CityEntity</class>
+        <class>model.CountryEntity</class>
+        <class>model.CustomerEntity</class>
+        <class>model.FilmEntity</class>
+        <class>model.FilmActorEntity</class>
+        <class>model.FilmCategoryEntity</class>
+    </persistence-unit>
+</persistence>
