@@ -5,8 +5,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.Value;
 
-@Data @AllArgsConstructor
+//@Data @AllArgsConstructor @NoArgsConstructor
+@Value
 public class ActorDTO {
 	@JsonProperty("id")
 	private int actorId;
@@ -15,19 +18,12 @@ public class ActorDTO {
 	@JsonProperty("apellidos")
 	private String lastName;
 	
-	public static ActorDTO from(Actor source) {
-		return new ActorDTO(
-				source.getActorId(),
-				source.getFirstName(),
-				source.getLastName()
-				);
+	public static ActorDTO from(Actor target) {
+		return new ActorDTO(target.getActorId(), target.getFirstName(), target.getLastName());
 	}
-	
-	public static Actor from(ActorDTO source) {
-		return new Actor(
-				source.getActorId(),
-				source.getFirstName(),
-				source.getLastName()
-				);
+
+	public static Actor from(ActorDTO target) {
+		return new Actor(target.getActorId(), target.getFirstName(), target.getLastName());
 	}
+
 }
